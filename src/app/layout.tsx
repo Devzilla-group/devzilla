@@ -1,15 +1,16 @@
+import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
+
+import { Header } from '@/components/layout/Header/Header';
+import { Footer } from '@/components/layout/Footer/Footer';
+
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const notoSans = Noto_Sans({
+  variable: '--font-noto-sans',
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -20,11 +21,15 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${notoSans.variable} font-sans antialiased`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
