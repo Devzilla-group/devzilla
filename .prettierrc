@@ -1,5 +1,5 @@
 {
-  "printWidth": 100,
+  "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
   "semi": true,
@@ -10,5 +10,20 @@
   "bracketSpacing": true,
   "bracketSameLine": false,
   "arrowParens": "always",
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindCustomOrder": [
+    "dark",
+    "group-hover",
+    "hover",
+    "focus",
+    "active",
+    "disabled",
+    "sm",
+    "md",
+    "lg",
+    "xl",
+    "2xl"
+  ],
+  "tailwindFunctions": ["clsx"]
 }

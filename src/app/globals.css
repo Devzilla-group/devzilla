@@ -1,26 +1,45 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /*colors*/
+  --black-color: #091908;
+  --grey-color: #848a9b;
+  --extra-grey-color: #f8fafc;
+  --blue-color: #1d4ed8;
+  --green-color: #43ed25;
+  --red-color: #ed2525;
+  --white-color: #ffffff;
+
+  /*fonts*/
+  --font-noto-sans: 'Noto Sans', ui-sans-serif, system-ui, Arial, sans-serif;
 }
+
+/*@theme {*/
+/*  --breakpoint-md: 640px;*/
+/*  --breakpoint-lg: 1200px;*/
+/*  --breakpoint-xl: 1536px;*/
+/*}*/
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-green: var(--green-color);
+  --color-black: var(--black-color);
+  --color-blue: var(--blue-color);
+  --color-grey: var(--grey-color);
+  --color-red: var(--red-color);
+  --color-extra-grey: var(--extra-grey-color);
+  --color-background: var(--white-color);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-noto-sans: var(--font-noto-sans);
 }
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #0a0a0a;*/
+/*    --foreground: #ededed;*/
+/*  }*/
+/*}*/
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--extra-grey-color);
+  color: var(--black-color);
+  font-family: var(--font-noto-sans), sans-serif;
 }
