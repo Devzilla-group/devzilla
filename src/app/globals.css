@@ -10,6 +10,8 @@
   --red-color: #ed2525;
   --white-color: #ffffff;
 
+  --mobile-menu-shadow: 0 0 67px 0 rgba(29, 78, 216, 0.27);
+
   /*fonts*/
   --font-noto-sans: 'Noto Sans', ui-sans-serif, system-ui, Arial, sans-serif;
 }
@@ -29,6 +31,8 @@
   --color-extra-grey: var(--extra-grey-color);
   --color-background: var(--white-color);
 
+  --mobile-menu-shadow: var(--mobile-menu-shadow);
+
   --font-noto-sans: var(--font-noto-sans);
 }
 /*@media (prefers-color-scheme: dark) {*/
@@ -42,4 +46,13 @@ body {
   background: var(--extra-grey-color);
   color: var(--black-color);
   font-family: var(--font-noto-sans), sans-serif;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  outline: none;
 }
