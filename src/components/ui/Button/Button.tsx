@@ -1,10 +1,7 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import clsx from 'clsx';
 
-type TButtonProps = {
-  children: ReactNode;
-  className?: string;
-};
+import { TButtonProps } from '@/components/ui/Button/button.types';
 
 export const Button: FC<TButtonProps> = ({ children, className }) => {
   return (
@@ -12,7 +9,7 @@ export const Button: FC<TButtonProps> = ({ children, className }) => {
       type={'button'}
       onClick={() => {}}
       className={clsx(
-        'bg-green hover:text-green hover:border-green focus:text-green focus:border-green hidden cursor-pointer rounded-[8px] border-2 px-8 py-2 outline-0 transition-colors duration-300 hover:bg-black focus:bg-black 2xl:flex 2xl:items-center 2xl:justify-center',
+        'bg-green hover:text-green hover:border-green focus:text-green focus:border-green block cursor-pointer rounded-[8px] border-2 px-8 py-2 font-medium outline-0 transition-colors duration-300 hover:bg-black focus:bg-black 2xl:items-center 2xl:justify-center',
         className,
       )}
     >
